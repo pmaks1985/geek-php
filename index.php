@@ -44,6 +44,7 @@
 $a = rand(0, 15);
 switch ($a) {
     case $a:
+        echo "Выпало число: $a выводим ";
         function recurse($a)
         {
             if ($a > 15) {
