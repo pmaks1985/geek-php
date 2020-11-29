@@ -107,6 +107,16 @@
 
 function power($val, $pow)
 {
+
+    function recurse($pow)
+    {
+        if ($a > $pow) {
+            return;
+        }
+        echo $a . " ";
+        recurse($a + 1);
+    }
+    recurse($a);
 }
 
 power(2, 3);
