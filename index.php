@@ -129,7 +129,7 @@
 $h = date("G");
 $m = date("i");
 
-function data($hours, $minutes)
+function todaysDate($hours, $minutes)
 {
 
     if ($hours == 1 || $hours == 21) {
@@ -150,4 +150,4 @@ function data($hours, $minutes)
     echo $hours  . $hoursText . $minutes . $minutesText;
 }
 
-data($h, $m);
+todaysDate($h, $m);
