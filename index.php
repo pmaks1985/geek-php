@@ -105,49 +105,59 @@
 
 // 6. *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power($val, $pow), где $val – заданное число, $pow – степень.
 
+//6.1
+
 // function power($val, $pow)
 // {
-
-//     function recurse($pow)
-//     {
-//         if ($a > $pow) {
-//             return;
-//         }
-//         echo $a . " ";
-//         recurse($a + 1);
-//     }
-//     recurse($a);
+//     $result = $val ** $pow;
+//     echo $result . "<br>";
 // }
 
 // power(2, 3);
+
+//6.2
+
+function recurse($val, $pow)
+{
+    if ($pow == 1) {
+        return ($val);
+    }
+    if ($pow != 1) {
+        return ($val * recurse($val, $pow - 1));
+    }
+}
+
+echo recurse(2, 5);
 
 // 7. *Написать функцию, которая вычисляет текущее время и возвращает его в формате с правильными склонениями, например:
 
 // 22 часа 15 минут
 // 21 час 43 минуты
 
-$h = date("G");
-$m = date("i");
+// $h = date("G");
+// $m = date("i");
 
-function todaysDate($hours, $minutes)
-{
+// function todaysDate($hours, $minutes)
+// {
 
-    if ($hours == 1 || $hours == 21) {
-        $hoursText = " час ";
-    } elseif ($hours > 1 && $hours < 5 || $hours > 21) {
-        $hoursText = " часа ";
-    } elseif ($hours > 4 && $hours < 21) {
-        $hoursText = " часов ";
-    }
-    if ($minutes == 1 || $minutes == 11 || $minutes == 21 || $minutes == 31 || $minutes == 41 || $minutes == 51) {
-        $minutesText = " минута ";
-    } elseif (($minutes > 1 && $minutes < 5) || ($minutes > 21 && $minutes < 25) || ($minutes > 31 && $minutes < 35) || ($minutes > 41 && $minutes < 45) || ($minutes > 51 && $minutes < 55)) {
-        $minutesText = " минуты ";
-    } elseif (($minutes > 4 && $minutes < 21) || ($minutes > 24 && $minutes < 31) || ($minutes > 34 && $minutes < 41) || ($minutes > 44 && $minutes < 51) || ($minutes > 54 && $minutes < 61)) {
-        $minutesText = " минут ";
-    }
+//     if ($hours == 1 || $hours == 21) {
+//         $hoursText = " час ";
+//     } elseif ($hours > 1 && $hours < 5 || $hours > 21) {
+//         $hoursText = " часа ";
+//     } elseif ($hours > 4 && $hours < 21) {
+//         $hoursText = " часов ";
+//     }
+//     if ($minutes == 1 || $minutes == 11 || $minutes == 21 || $minutes == 31 || $minutes == 41 || $minutes == 51) {
+//         $minutesText = " минута ";
+//     } elseif (($minutes > 1 && $minutes < 5) || ($minutes > 21 && $minutes < 25) || ($minutes > 31 && $minutes < 35) || ($minutes > 41 && $minutes < 45) || ($minutes > 51 && $minutes < 55)) {
+//         $minutesText = " минуты ";
+//     } elseif (($minutes > 4 && $minutes < 21) || ($minutes > 24 && $minutes < 31) || ($minutes > 34 && $minutes < 41) || ($minutes > 44 && $minutes < 51) || ($minutes > 54 && $minutes < 61)) {
+//         $minutesText = " минут ";
+//     } else {
+//         echo "Ошибка!";
+//     }
 
-    echo $hours  . $hoursText . $minutes . $minutesText;
-}
+//     echo $hours  . $hoursText . $minutes . $minutesText;
+// }
 
-todaysDate($h, $m);
+// todaysDate($h, $m);
