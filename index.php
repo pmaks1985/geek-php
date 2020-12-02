@@ -87,10 +87,10 @@
 
 // 5.2
 
-$replacement = array(" ");
+// $replacement = array(" ");
 
-function translit($word, $replacement)
-{
-    echo str_replace($replacement, "_", $word);
-}
-translit("животное которое всегда поёт)", $replacement);
+// function translit($word, $replacement)
+// {
+//     echo str_replace($replacement, "_", $word);
+// }
+// translit("животное которое всегда поёт)", $replacement);
