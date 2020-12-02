@@ -70,3 +70,27 @@
 // }
 
 // translit("животное", $alphabet);
+
+// 5. Написать функцию, которая заменяет в строке пробелы на подчеркивания и возвращает видоизмененную строчку.
+
+// 5.1
+
+// $replacement = array(
+//     " " => "_",
+// );
+
+// function translit($word, $replacement)
+// {
+//     echo strtr($word, $replacement);    
+// }
+// translit("животное которое поёт)", $replacement);
+
+// 5.2
+
+$replacement = array(" ");
+
+function translit($word, $replacement)
+{
+    echo str_replace($replacement, "_", $word);
+}
+translit("животное которое всегда поёт)", $replacement);
