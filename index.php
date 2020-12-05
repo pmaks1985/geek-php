@@ -20,8 +20,17 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+    <div class="container">
+        <?php include "blocks/header.php"; ?>
+        <div class="row">
+            <div class="col-md-2">Left menu</div>
+            <?php include "blocks/content.php"; ?>
+            <div class="col-md-2">Right menu</div>
+        </div>
+        <div class="row">Footer</div>
+    </div>
+
+    <!-- <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -38,7 +47,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
