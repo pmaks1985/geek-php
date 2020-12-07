@@ -11,7 +11,7 @@
         <?php
             }
         };
-        $directory = "images";
+        $directory = "big";
         imagesDir($directory);
         ?>
     </div>
