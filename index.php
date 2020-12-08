@@ -7,3 +7,5 @@ $res = mysqli_query($connect, $sql);
 while ($data = mysqli_fetch_assoc($res)) {
     print_r($data);
 }
+?>
+
