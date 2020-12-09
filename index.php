@@ -32,10 +32,8 @@ $res = mysqli_query($connect, $sql);
         <div class="d-flex flex-wrap">
             <?php
             while ($data = mysqli_fetch_assoc($res)) {?>
-                <a class="photo" href="<?=$data['path_big'].$data['name']?>" target="_blank"><img src="<?=$data['path_small'].$data['name']?>" alt=""></a>
+                <a class="photo" href="<?=$data['path_big'].$data['name']?>" target="_blank"><img src="<?=$data['path_small'].$data['name']?>" alt="<?=strpos($data['name'], '.')?>"></a> <!--Попытался вывести в alt название файла из БД-->
             <?
-                $offset = strpos($data['name'], '.');
-                echo $offset;
             }
             ?>
         </div>
