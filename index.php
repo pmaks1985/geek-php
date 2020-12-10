@@ -27,7 +27,7 @@ $res = mysqli_query($connect, $sql);
                     $alt = $data['name'];
                     $alt = substr ($alt, 0, strrpos($alt, '.'));
                     ?>
-                    <a class="photo position-relative" href="<?=$data['path_big'].$data['name']?>" target="_blank">
+                    <a class="photo position-relative" href="server.php?id=<?=$data['id']?>&name=<?=$data['name']?>&path=<?=$data['path_big']?>&count=<?=$data['count']?>">
                         <img src="<?=$data['path_small'].$data['name']?>" alt="<?=$alt?>"> <!--в alt название файла из БД-->
                         <small class="position-absolute text-white" style="z-index: 1;top: 85%;left: 75%;">Просмотры: <?=$data['count']?></small>
                     </a>
