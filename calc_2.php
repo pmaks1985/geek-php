@@ -9,37 +9,42 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Задание_1</title>
+    <title>Задание_2</title>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <p>1. Создать форму-калькулятор операциями: сложение, вычитание, умножение, деление. Не забыть обработать
-                деление на ноль! Выбор операции можно осуществлять с помощью тега select.</p>
-            <form action="server.php" method="POST" class="d-flex">
+            <p>2. Создать калькулятор, который будет определять тип выбранной пользователем операции, ориентируясь на
+                нажатую кнопку.</p>
+            <form action="newServer.php" method="POST" class="d-flex">
                 <div class="form-group mr-3">
-                    <input type="text" name="one" value="" class="form-control">
-                </div>
-                <select name="sign" class="form-control mb-3 mr-3 w-25">
-                    <option>Выберите действие</option>
-                    <option>+</option>
-                    <option>-</option>
-                    <option>/</option>
-                    <option>*</option>
-                </select>
-                <div class="form-group mr-3">
-                    <input type="text" name="two" value="" class="form-control">
+                    <input type="text" name="three" value="" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" value="Результат" class="btn btn-primary">
+                    <input type="text" name="four" value="" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <?php
-                    if ($_GET['result']) {
-                        echo $_GET['result'];
-                    }
-                    ?>
+                    <input type="submit" name="plus" value="Сложить" class="form-control">
+                </div>
+                <div class="form-group mr-3">
+                    <input type="submit" name="minus" value="Вычесть" class="form-control">
+                </div>
+                <div class="form-group mr-3">
+                    <input type="submit" name="multiply" value="Умножить" class="form-control">
+                </div>
+                <div class="form-group mr-3">
+                    <input type="submit" name="split" value="Разделить" class="form-control">
+                </div>
+                <div class="form-group mr-3">
+                    <p>
+                        <?/*php
+                        if ($_GET['result']) {
+                            echo $_GET['result'];
+                        }   */
+                        ?>
+                    </p>
+
                 </div>
             </form>
         </div>

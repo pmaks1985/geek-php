@@ -35,11 +35,13 @@
                     <input type="submit" value="Результат" class="btn btn-primary">
                 </div>
                 <div class="form-group mr-3">
-                    <?php
-                    if ($_GET['result']) {
-                        echo $_GET['result'];
-                    }
-                    ?>
+                    <p>
+                        <?php
+                        if ($_GET['result']) {
+                            echo $_GET['result'];
+                        }
+                        ?>
+                    </p>
                 </div>
             </form>
         </div>

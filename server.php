@@ -2,6 +2,7 @@
 // print_r($_POST);
 $one = strip_tags((int)$_POST['one']);
 $two = strip_tags((int)$_POST['two']);
+
 $sign = $_POST['sign'];
 switch ($sign) {
     case '-':
@@ -29,4 +30,3 @@ switch ($sign) {
 if ($res) {
     header("Location: calc_1.php?result=$res");
 }
-echo $res;
