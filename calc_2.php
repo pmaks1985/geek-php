@@ -25,23 +25,23 @@
                     <input type="text" name="four" value="" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="plus" value="Сложить" class="form-control">
+                    <input type="submit" name="sign" value="+" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="minus" value="Вычесть" class="form-control">
+                    <input type="submit" name="sign" value="-" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="multiply" value="Умножить" class="form-control">
+                    <input type="submit" name="sign" value="*" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="split" value="Разделить" class="form-control">
+                    <input type="submit" name="sign" value="/" class="form-control">
                 </div>
                 <div class="form-group mr-3">
                     <p>
-                        <?/*php
+                        <?php
                         if ($_GET['result']) {
                             echo $_GET['result'];
-                        }   */
+                        }
                         ?>
                     </p>
 
