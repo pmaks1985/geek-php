@@ -1,3 +1,9 @@
+<?php
+include "config.php";
+
+$sql = "select * from reviews";
+$res = mysqli_query($connect, $sql);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,18 +22,39 @@
 <div class="container">
     <h1>Отзывы сайта</h1>
     <div class="row flex-column">
-        <div class="col-md-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum nemo, quo tempora
-            voluptas voluptates?
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Дата отзыва</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Текст отзыва</th>
+                </tr>
+                </thead>
+                <tbody>
+                <? while ($data = mysqli_fetch_assoc($res)) { ?>
+                    <tr>
+                        <th scope="row"><?= $data['date_review'] ?></th>
+                        <td><?= $data['name'] ?></td>
+                        <td><?= $data['text_review'] ?></td>
+                    </tr>
+                <? } ?>
+                </tbody>
+            </table>
         </div>
         <div class="col-md-4">
-            <hr>
-            <form>
+            <form action="server_for_reviews.php" method="post">
                 <div class="form-group">
                     <label for="authors-name"><span class="font-weight-bold">Имя автора</span></label>
                     <input type="text" class="form-control" name="authors-name" placeholder="Иван Иванов">
                 </div>
-                <label for="review-text"><span class="font-weight-bold">Текст отзыва</span></label>
-                <textarea class="form-control" name="review-text" rows="3"></textarea>
+                <div class="form-group">
+                    <label for="review-text"><span class="font-weight-bold">Текст отзыва</span></label>
+                    <textarea class="form-control" name="review-text" rows="3"></textarea>
+                </div>
+                <div class="form-group text-right">
+                    <input type="submit" name="review-button" value="Оставить отзыв" class="btn btn-primary">
+                </div>
             </form>
         </div>
     </div>
