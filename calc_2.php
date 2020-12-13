@@ -17,7 +17,7 @@
         <div class="row">
             <p>2. Создать калькулятор, который будет определять тип выбранной пользователем операции, ориентируясь на
                 нажатую кнопку.</p>
-            <form action="newServer.php" method="POST" class="d-flex">
+            <form action="server.php" method="POST" class="d-flex">
                 <div class="form-group mr-3">
                     <input type="text" name="three" value="" class="form-control">
                 </div>
@@ -25,16 +25,16 @@
                     <input type="text" name="four" value="" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="sign" value="+" class="form-control">
+                    <input type="submit" name="sign-val" value="+" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="sign" value="-" class="form-control">
+                    <input type="submit" name="sign-val" value="-" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="sign" value="*" class="form-control">
+                    <input type="submit" name="sign-val" value="*" class="form-control">
                 </div>
                 <div class="form-group mr-3">
-                    <input type="submit" name="sign" value="/" class="form-control">
+                    <input type="submit" name="sign-val" value="/" class="form-control">
                 </div>
                 <div class="form-group mr-3">
                     <p>

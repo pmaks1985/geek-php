@@ -30,3 +30,34 @@ switch ($sign) {
 if ($res) {
     header("Location: calc_1.php?result=$res");
 }
+
+$three = strip_tags((int)$_POST['three']);
+$four = strip_tags((int)$_POST['four']);
+
+$val_sign = $_POST['sign-val'];
+switch ($val_sign) {
+    case '-':
+        $result = $three - $four;
+        break;
+    case '+':
+        $result = $three + $four;
+        break;
+    case '/':
+        if ($four == "0") {
+            $result = "Делить на 0 нельзя!";
+        } else {
+            $result = $three / $four;
+        }
+        break;
+    case '*':
+        $result = $three * $four;
+        break;
+
+    default:
+        $result = "Ошибка!!!";
+        break;
+}
+
+if ($result) {
+    header("Location: calc_2.php?result=$result");
+}
