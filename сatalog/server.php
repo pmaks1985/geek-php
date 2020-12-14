@@ -27,7 +27,7 @@ if (mysqli_query($connect, $sql)) {
     <h1><?= $res['title']; ?></h1>
     <div class="row mt-5">
         <div class="col">
-            <img src="<?= $res['path_to_big_picture']; ?>" alt="">
+            <img src="images/big/<?= $res['path_to_picture']; ?>" alt="">
         </div>
         <div class="col">
             <p><?= $res['full_description']; ?></p>

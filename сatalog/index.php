@@ -23,7 +23,7 @@ $res = mysqli_query($connect, $sql);
     <div class="row mt-5">
         <? while ($data = mysqli_fetch_assoc($res)) { ?>
             <div class="card mr-3" style="width: 18rem;">
-                <img src="<?= $data['path_to_picture'] ?>" class="card-img-top" alt="...">
+                <img src="images/<?= $data['path_to_picture'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $data['title'] ?></h5>
                     <p class="card-text" style="min-height: 100px;"><?= $data['description'] ?></p>
