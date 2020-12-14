@@ -31,7 +31,7 @@ $res = mysqli_query($connect, $sql);
                         <li class="list-group-item">Цена:<?= $data['price'] ?></li>
                     </ul>
                     <p class="card-text text-right">
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="server.php?id=<?=$data['id']?>&title=<?=$data['title']?>&path=<?=$data['path_to_big_picture']?>&description=<?=$data['full_description']?>&price=<?=$data['price']?>" class="btn btn-primary">Подробнее</a>
                     </p>
                 </div>
             </div>
