@@ -28,10 +28,10 @@ $res = mysqli_query($connect, $sql);
                     <h5 class="card-title"><?= $data['title'] ?></h5>
                     <p class="card-text" style="min-height: 100px;"><?= $data['description'] ?></p>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Цена:<?= $data['price'] ?></li>
+                        <li class="list-group-item text-bold">Цена: <b><?= $data['price'] ?> ye</b></li>
                     </ul>
                     <p class="card-text text-right">
-                        <a href="server.php?id=<?=$data['id']?>&title=<?=$data['title']?>&path=<?=$data['path_to_big_picture']?>&description=<?=$data['full_description']?>&price=<?=$data['price']?>" class="btn btn-primary">Подробнее</a>
+                        <a href="server.php?id=<?= $data['id'] ?>" class="btn btn-primary">Подробнее</a>
                     </p>
                 </div>
             </div>
