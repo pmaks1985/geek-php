@@ -1,3 +1,9 @@
+<?php
+include "config.php";
+
+$sql = "select * from catalog";
+$res = mysqli_query($connect, $sql);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,61 +12,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>Catalog</title>
 </head>
 <body>
 <div class="container">
     <h1>Каталог товаров</h1>
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            <img src="images/acer.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam asperiores.</p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Цена:</li>
-                </ul>
-                <p class="card-text text-right">
-                    <a href="#" class="btn btn-primary">Купить</a>
-                </p>
+    <div class="row mt-5">
+        <? while ($data = mysqli_fetch_assoc($res)) { ?>
+            <div class="card mr-3" style="width: 18rem;">
+                <img src="<?= $data['path_to_picture'] ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $data['title'] ?></h5>
+                    <p class="card-text" style="min-height: 100px;"><?= $data['description'] ?></p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Цена:<?= $data['price'] ?></li>
+                    </ul>
+                    <p class="card-text text-right">
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/iphone.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Цена:</li>
-                </ul>
-                <p class="card-text text-right">
-                    <a href="#" class="btn btn-primary">Купить</a>
-                </p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/samsung.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">Deleniti doloremque fuga, impedit labore modi non nulla placeat quia sit totam. Consectetur. </p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Цена:</li>
-                </ul>
-                <p class="card-text text-right">
-                    <a href="#" class="btn btn-primary">Купить</a>
-                </p>
-            </div>
-        </div>
+        <? } ?>
     </div>
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
 <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
