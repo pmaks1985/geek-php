@@ -43,7 +43,7 @@ $res = mysqli_query($connect, $sql);
             </table>
         </div>
         <div class="col-md-4">
-            <form action="server_for_reviews.php" method="post">
+            <form action="server.php" method="post">
                 <div class="form-group">
                     <label for="authors-name"><span class="font-weight-bold">Имя автора</span></label>
                     <input type="text" class="form-control" name="authors-name" placeholder="Иван Иванов">

@@ -5,5 +5,5 @@ $review_text = strip_tags($_POST['review-text']);
 
 $sql = "insert into reviews (name, text_review) values ('$name', '$review_text')";
 if(mysqli_query($connect,$sql)){
-    header("Location: reviews.php");
+    header("Location: index.php");
 }

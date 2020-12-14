@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_for_reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/server_for_reviews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/reviews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_for_reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\geek-php\reviews" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +47,7 @@
       <updated>1607678167184</updated>
       <workItem from="1607678180984" duration="715000" />
       <workItem from="1607845048731" duration="3581000" />
+      <workItem from="1607920307673" duration="1086000" />
     </task>
     <servers />
   </component>
