@@ -1,5 +1,5 @@
 <?php
-include "../config/config.php";
+include "../../config/config.php";
 $name = strip_tags($_POST['authors-name']);
 $review_text = strip_tags($_POST['review-text']);
 
