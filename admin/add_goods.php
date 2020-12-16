@@ -35,6 +35,11 @@
                 <label for="price">Цена товара</label>
                 <input type="number" class="form-control" id="price" name="price" aria-describedby="price">
             </div>
+            <div class="form-group">
+                <label for="img">Картинка</label>
+                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                <input type="file" class="form-control" id="img" name="img" aria-describedby="img">
+            </div>
             <input type="submit" class="btn btn-primary" value="Добавить">
         </form>
     </div>

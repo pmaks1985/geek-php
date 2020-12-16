@@ -1,7 +1,7 @@
 <?php
 include "../config/config.php";
 
-$sql = "select * from catalog order by title asc";
+$sql = "select * from catalog order by id desc";
 $res = mysqli_query($connect, $sql);
 ?>
 <!doctype html>
@@ -38,15 +38,16 @@ $res = mysqli_query($connect, $sql);
             <?php while ($good = mysqli_fetch_assoc($res)): ?>
                 <tr>
                     <td scope="row">
-                        <img src="../public/uploads/images/<?= $good['path_to_picture'] ?>" alt="" style="width: 200px;">
+                        <img src="../public/uploads/images/<?= $good['path_to_picture'] ?>" alt=""
+                             style="width: 200px;">
                         <span><?= $good['title'] ?></span>
                     </td>
                     <td>
                         <p>
-                            <a href="edit_goods.php?id=<?=$good['id']?>" class="btn btn-primary">Изменить</a>
+                            <a href="edit_goods.php?id=<?= $good['id'] ?>" class="btn btn-primary">Изменить</a>
                         </p>
                         <p>
-                            <a href="delete_goods.php?id=<?=$good['id']?>" class="btn btn-primary">Удалить</a>
+                            <a href="delete_goods.php?id=<?= $good['id'] ?>" class="btn btn-primary">Удалить</a>
                         </p>
                     </td>
                 </tr>
