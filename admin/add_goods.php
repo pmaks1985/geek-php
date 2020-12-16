@@ -18,7 +18,7 @@
         <h1>Добавить товар</h1>
     </div>
     <div class="row">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="../models/core_goods.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Название товара</label>
                 <input type="text" class="form-control" id="title" name="title" aria-describedby="title">
@@ -35,7 +35,7 @@
                 <label for="price">Цена товара</label>
                 <input type="number" class="form-control" id="price" name="price" aria-describedby="price">
             </div>
-            <button type="submit" class="btn btn-primary">Добавить</button>
+            <input type="submit" class="btn btn-primary" value="Добавить">
         </form>
     </div>
 </div>
