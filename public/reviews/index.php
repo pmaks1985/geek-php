@@ -28,7 +28,7 @@ $res = mysqli_query($connect, $sql);
     </div>
     <div class="row flex-column mt-5">
         <div class="col">
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                 <tr>
                     <th scope="col">Дата отзыва</th>
