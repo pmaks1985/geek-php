@@ -1,9 +1,3 @@
-<?php
-include "../config/config.php";
-
-$sql = "select * from catalog order by title asc";
-$res = mysqli_query($connect, $sql);
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,39 +14,29 @@ $res = mysqli_query($connect, $sql);
 <body>
 <div class="container">
     <? include "../templates/header.php"; ?>
-    <div class="row my-5">
-        <h1>Админка</h1>
+    <div class="row mt-5">
+        <h1>Добавить товар</h1>
     </div>
     <div class="row">
-        <p>
-            <a href="add_goods.php" class="btn btn-primary">Добавить новый товар</a>
-        </p>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">Товар</th>
-                <th scope="col">Действие</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php while ($good = mysqli_fetch_assoc($res)): ?>
-                <tr>
-                    <td scope="row">
-                        <img src="../public/uploads/images/<?= $good['path_to_picture'] ?>" alt="" style="width: 200px;">
-                        <span><?= $good['title'] ?></span>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="edit_goods.php?id=<?=$good['id']?>" class="btn btn-primary">Изменить</a>
-                        </p>
-                        <p>
-                            <a href="delete_goods.php?id=<?=$good['id']?>" class="btn btn-primary">Удалить</a>
-                        </p>
-                    </td>
-                </tr>
-            <? endwhile; ?>
-            </tbody>
-        </table>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Название товара</label>
+                <input type="text" class="form-control" id="title" name="title" aria-describedby="title">
+            </div>
+            <div class="form-group">
+                <label for="description">Краткое описание товара</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="full_description">Полное описание товара</label>
+                <textarea class="form-control" id="full_description" name="full_description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Цена товара</label>
+                <input type="number" class="form-control" id="price" name="price" aria-describedby="price">
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
     </div>
 </div>
 
@@ -73,3 +57,4 @@ $res = mysqli_query($connect, $sql);
 -->
 </body>
 </html>
+
