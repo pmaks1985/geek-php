@@ -4,14 +4,13 @@ $title = trim(strip_tags($_POST['title']));
 $description = trim(strip_tags($_POST['description']));
 $full_description = trim(strip_tags($_POST['full_description']));
 $price = (int)trim(strip_tags($_POST['price']));
-$filePath = $_FILES['img']['tmp_name'];
-$fileName = $_FILES['img']['name'];
-$type = $_FILES['img']['type'];
-$size = $_FILES['img']['size'];
-
-copy($filePath,"../public/uploads/".$fileName);
-
-$sql = "INSERT INTO catalog ( title, description, full_description, price) VALUES ('$title','$description','$full_description','$price')";
-if (mysqli_query($connect, $sql)) {
-    header("Location: ../admin/");
+$filePath = $_FILES['image']['tmp_name'];
+$fileName = $_FILES['image']['name'];
+$type = $_FILES['image']['type'];
+$size = $_FILES['image']['size'];
+if (move_uploaded_file($filePath, "../public/uploads/images/" . $fileName)) {
+    $sql = "INSERT INTO catalog ( title, description, full_description, price, path_to_picture) VALUES ('$title','$description','$full_description','$price', '$fileName')";
+    if (mysqli_query($connect, $sql)) {
+        header("Location: ../admin/");
+    }
 }

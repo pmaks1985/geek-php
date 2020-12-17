@@ -36,9 +36,9 @@
                 <input type="number" class="form-control" id="price" name="price" aria-describedby="price">
             </div>
             <div class="form-group">
-                <label for="img">Картинка</label>
-                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-                <input type="file" class="form-control" id="img" name="img" aria-describedby="img">
+                <label for="image">Картинка</label>
+                <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
+                <input type="file" accept="image/*" class="form-control" name="image">
             </div>
             <input type="submit" class="btn btn-primary" value="Добавить">
         </form>

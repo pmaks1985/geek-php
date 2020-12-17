@@ -4,7 +4,6 @@
     <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add_goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_goods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/core_goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/core_goods.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,8 @@
       <workItem from="1607920307673" duration="4790000" />
       <workItem from="1607932111487" duration="2023000" />
       <workItem from="1608018558868" duration="5400000" />
-      <workItem from="1608098360356" duration="11555000" />
+      <workItem from="1608098360356" duration="12154000" />
+      <workItem from="1608185874905" duration="3692000" />
     </task>
     <servers />
   </component>
