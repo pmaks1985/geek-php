@@ -7,7 +7,7 @@ if ($id) {
 $res = mysqli_query($connect, $sql);
 while ($data = mysqli_fetch_assoc($res)) {
     $id_good = $data['id'];
-    
+
 }
 
 ?>
