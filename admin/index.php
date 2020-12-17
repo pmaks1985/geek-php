@@ -44,7 +44,7 @@ $res = mysqli_query($connect, $sql);
                     </td>
                     <td>
                         <p>
-                            <a href="edit_goods.php?id=<?= $good['id'] ?>" class="btn btn-primary">Изменить</a>
+                            <a href="#" class="btn btn-primary">Изменить</a> <!--edit_goods.php?id=<= $good['id'] ?>-->
                         </p>
                         <p>
                             <a href="delete_goods.php?id=<?= $good['id'] ?>" class="btn btn-primary">Удалить</a>
