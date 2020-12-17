@@ -37,8 +37,9 @@ if (mysqli_query($connect, $sql)) {
         <div class="col">
             <p><?= $res['full_description']; ?></p>
             <div class="text-danger h2"><?= $res['price']; ?> ye</div>
-            <div class="text-right">
-                <a href="<?= $_SERVER['HTTP_REFERER'] ?>" class="btn btn-primary">Купить</a>
+            <div class="text-right ml-3">
+                <a href="<?= $_SERVER['[DOCUMENT_ROOT]'] . "/public/basket/?id=" . $res['id'] ?>"
+                   class="btn btn-primary">Купить</a>
             </div>
         </div>
     </div>
