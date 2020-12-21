@@ -1,9 +1,3 @@
-<?php
-include "../config/config.php";
-
-$sql = "select * from catalog order by id desc";
-$res = mysqli_query($connect, $sql);
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,46 +9,14 @@ $res = mysqli_query($connect, $sql);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Админка</title>
+    <title>Главная</title>
 </head>
 <body>
+
 <div class="container">
-    <? include "../templates/header.php"; ?>
-    <div class="row my-5">
-        <h1>Админка</h1>
-    </div>
-    <div class="row">
-        <p>
-            <a href="add_goods.php" class="btn btn-primary">Добавить новый товар</a>
-        </p>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">Товар</th>
-                <th scope="col">Действие</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php while ($good = mysqli_fetch_assoc($res)): ?>
-                <tr>
-                    <td scope="row">
-                        <img src="../public/uploads/images/<?= $good['path_to_picture'] ?>" alt=""
-                             style="width: 200px;">
-                        <span><?= $good['title'] ?></span>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="#" class="btn btn-primary">Изменить</a> <!--edit_goods.php?id=<= $good['id'] ?>-->
-                        </p>
-                        <p>
-                            <a href="delete_goods.php?id=<?= $good['id'] ?>" class="btn btn-primary">Удалить</a>
-                        </p>
-                    </td>
-                </tr>
-            <? endwhile; ?>
-            </tbody>
-        </table>
-    </div>
+    <? include "blocks/header.php"; ?>
+    <? include "blocks/top-menu.php"; ?>
+    <? include "blocks/content.php"; ?>
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
