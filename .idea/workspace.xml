@@ -2,47 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/top-menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/geek-php.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Screenshot_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/acer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/big/acer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/big/iphone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/big/samsung.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/iphone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/samsung.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/catalog/catalog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/catalog/detail-good.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_goods.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete_goods.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_goods.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/core_goods.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/db_goods.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/basket/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/catalog/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/catalog/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/reviews/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/reviews/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/Screenshot_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/acer.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/big/acer.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/big/iphone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/big/samsung.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/iphone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/samsung.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reviews.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -77,6 +50,7 @@
       <recent name="D:\OpenServer\domains\geek-php\Catalog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\geek-php\pages\catalog" />
       <recent name="D:\OpenServer\domains\geek-php\public" />
       <recent name="D:\OpenServer\domains\geek-php\reviews" />
     </key>
@@ -98,6 +72,7 @@
       <workItem from="1608185874905" duration="11756000" />
       <workItem from="1608466013383" duration="630000" />
       <workItem from="1608528660641" duration="8099000" />
+      <workItem from="1608704823966" duration="5172000" />
     </task>
     <servers />
   </component>

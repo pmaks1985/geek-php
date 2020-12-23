@@ -1,7 +1,7 @@
 <?php
 switch ($_GET['page']) {
     case 'catalog':
-        include "pages/catalog.php";
+        include "pages/catalog/catalog.php";
         break;
     case 'reviews':
         include "pages/reviews.php";
@@ -26,6 +26,9 @@ switch ($_GET['page']) {
         include "pages/cart.php";
         break;
 
+    case 'detail-good':
+        include "pages/catalog/detail-good.php";
+        break;
     case 'add_good':
         include "pages/admin/add_good.php";
         break;

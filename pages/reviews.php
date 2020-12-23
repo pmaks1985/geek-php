@@ -3,10 +3,13 @@ include "config.php";
 
 $sql = "select * from reviews ORDER BY date_review DESC";
 $res = mysqli_query($connect, $sql);
-
-if (!isset($_SESSION['id_user'])):?>
-<p class="h5 text-danger mt-4">Отзывы могут оставлять только авторизованные пользователи!</p>
-<?endif;?>
+?>
+<div class="row mt-5">
+    <h1>Отзывы сайта</h1>
+</div>
+<? if (!isset($_SESSION['id_user'])): ?>
+    <p class="h5 text-danger mt-4">Отзывы могут оставлять только авторизованные пользователи!</p>
+<? endif; ?>
 <div class="row flex-column mt-5">
     <div class="col">
         <table class="table table-hover">
@@ -28,23 +31,23 @@ if (!isset($_SESSION['id_user'])):?>
             </tbody>
         </table>
     </div>
-    <?/*if (isset($_SESSION['id_user'])):*/?>
-    <div class="row justify-content-end">
-        <div class="col-md-4">
-            <form action="../engine/server.php" method="post">
-                <div class="form-group">
-                    <label for="authors-name"><span class="font-weight-bold">Имя автора</span></label>
-                    <input type="text" class="form-control" name="authors-name" placeholder="Иван Иванов">
-                </div>
-                <div class="form-group">
-                    <label for="review-text"><span class="font-weight-bold">Текст отзыва</span></label>
-                    <textarea class="form-control" name="review-text" rows="3"></textarea>
-                </div>
-                <div class="form-group text-right">
-                    <input type="submit" name="review-button" value="Оставить отзыв" class="btn btn-primary">
-                </div>
-            </form>
+    <? if (isset($_SESSION['id_user'])): ?>
+        <div class="row justify-content-end">
+            <div class="col-md-4">
+                <form action="../engine/server.php" method="post">
+                    <div class="form-group">
+                        <label for="authors-name"><span class="font-weight-bold">Имя автора</span></label>
+                        <input type="text" class="form-control" name="authors-name" placeholder="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text"><span class="font-weight-bold">Текст отзыва</span></label>
+                        <textarea class="form-control" name="review-text" rows="3"></textarea>
+                    </div>
+                    <div class="form-group text-right">
+                        <input type="submit" name="review-button" value="Оставить отзыв" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <?/*endif;*/?>
+    <? endif; ?>
 </div>
