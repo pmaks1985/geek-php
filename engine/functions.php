@@ -10,13 +10,3 @@ function addingReview($connect, $name, $review_text){
         header("Location: /?page=reviews");
     }
 }
-
-function viewProduct ($connect, $id){
-    if ($id) {
-        $sql = "SELECT * FROM catalog WHERE id=$id";
-    }
-    if (mysqli_query($connect, $sql)) {
-        $res = mysqli_fetch_assoc(mysqli_query($connect, $sql));
-    }
-    return $res;
-}
