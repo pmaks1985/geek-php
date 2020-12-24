@@ -7,7 +7,7 @@ $res = mysqli_query($connect, $sql);
 <div class="row mt-5">
     <h1>Отзывы сайта</h1>
 </div>
-<? if (!isset($_SESSION['id_user'])): ?>
+<? if (!isset($_SESSION['login'])): ?>
     <p class="h5 text-danger mt-4">Отзывы могут оставлять только авторизованные пользователи!</p>
 <? endif; ?>
 <div class="row flex-column mt-5">
@@ -31,7 +31,7 @@ $res = mysqli_query($connect, $sql);
             </tbody>
         </table>
     </div>
-    <? if (isset($_SESSION['id_user'])): ?>
+    <? if (isset($_SESSION['login'])): ?>
         <div class="row justify-content-end">
             <div class="col-md-4">
                 <form action="../engine/server.php" method="post">

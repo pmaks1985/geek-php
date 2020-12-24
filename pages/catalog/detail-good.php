@@ -11,7 +11,7 @@ if (mysqli_query($connect, $sql)) {
 ?>
 <div class="row">
     <?php
-    if (!isset($_SESSION['id_user'])) {
+    if (!isset($_SESSION['login'])) {
         ?>
         <p class="h5 text-danger mt-4">Товары можно приобрести только авторизованным пользователям</p>
         <?php
@@ -37,8 +37,10 @@ if (mysqli_query($connect, $sql)) {
         <p><?= $res['full_description']; ?></p>
         <div class="text-danger h2"><?= $res['price']; ?> ye</div>
         <div class="text-right ml-3">
-            <a href="<?= $_SERVER['[DOCUMENT_ROOT]'] . "/engine/goods.php?id=" . $res['id'] ?>"
-               class="btn btn-primary">Купить</a>
+            <? if (isset($_SESSION['login'])): ?>
+                <a href="<?= $_SERVER['[DOCUMENT_ROOT]'] . "/engine/goods.php?id=" . $res['id'] ?>"
+                   class="btn btn-primary">Купить</a>
+            <? endif; ?>
         </div>
     </div>
 </div>

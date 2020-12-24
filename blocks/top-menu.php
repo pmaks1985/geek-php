@@ -7,14 +7,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="?page=reviews">Отзывы</a>
             </li>
-            <?/*if(!isset($_SESSION['id_user'])):*/?>
+            <?if(!isset($_SESSION['login'])):?>
             <li class="nav-item">
                 <a class="nav-link" href="?page=reg">Регистрация</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?page=auth">Войти</a>
             </li>
-            <?/*else:*/?>
+            <?else:?>
                 <li class="nav-item">
                     <a class="nav-link" href="?page=lk">Личный кабинет</a>
                 </li>
@@ -24,7 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="?page=basket">Корзина</a>
                 </li>
-            <?/*endif;*/?>
+            <?endif;?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
