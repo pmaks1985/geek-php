@@ -25,6 +25,6 @@ function regUser($connect, $login, $pass)
         $_SESSION["pass"] = $pass;
         header("Location: ../index.php?page=auth&success=true");
     } else {
-        header("Location: ../index.php?page=auth");
+        header("Location: ../index.php?page=auth&error=true");
     }
 }

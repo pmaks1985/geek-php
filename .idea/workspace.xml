@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/top-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/top-menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/catalog/detail-good.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/detail-good.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reviews.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
