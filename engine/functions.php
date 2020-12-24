@@ -21,8 +21,8 @@ function regUser($connect, $login, $pass)
     $sql = "select id_user from users where login='$login' and pass='$pass'";
     $res = mysqli_query($connect, $sql) or die("Error: " . mysqli_error($connect));
     if (mysqli_num_rows($res) == 1) {
-        $login = $_SESSION["login"];
-        $pass = $_SESSION["pass"];
+        $_SESSION["login"] = $login;
+        $_SESSION["pass"] = $pass;
         header("Location: ../index.php?page=auth&success=true");
     } else {
         header("Location: ../index.php?page=auth");
