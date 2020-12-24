@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="" />
+    <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/goods.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/top-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/top-menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/detail-good.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/detail-good.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +69,7 @@
       <workItem from="1608466013383" duration="630000" />
       <workItem from="1608528660641" duration="8099000" />
       <workItem from="1608704823966" duration="5285000" />
+      <workItem from="1608786539753" duration="8152000" />
     </task>
     <servers />
   </component>
