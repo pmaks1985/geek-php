@@ -5,7 +5,7 @@ session_start();
 <div class="row justify-content-center">
     <div class="col-md-4">
         <? if ($_GET['success'] && $_SESSION['login']): ?>
-            <p class="h5 text-danger mt-4">Ваша учетная запись подтверждена</p>
+            <p class="h5 mt-4 text-success">Ваша учетная запись подтверждена</p>
         <? elseif ($_GET['error']):?>
             <p class="h5 text-danger mt-4">Такого пользователя не существует</p>
         <? endif; ?>

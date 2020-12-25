@@ -3,6 +3,9 @@ switch ($_GET['page']) {
     case 'catalog':
         include "pages/catalog/catalog.php";
         break;
+    case 'detail-good':
+        include "pages/catalog/detail-good.php";
+        break;
     case 'reviews':
         include "pages/reviews.php";
         break;
@@ -25,9 +28,8 @@ switch ($_GET['page']) {
     case 'cart':
         include "pages/cart.php";
         break;
-
-    case 'detail-good':
-        include "pages/catalog/detail-good.php";
+    case 'admin':
+        include "pages/admin/index.php";
         break;
     case 'add_good':
         include "pages/admin/add_good.php";
@@ -38,14 +40,12 @@ switch ($_GET['page']) {
     case 'prices':
         include "pages/prices.php";
         break;
-
     case 'details_order':
         include "pages/admin/detail_order.php";
         break;
     case 'edit_orders':
         include "pages/admin/orders.php";
         break;
-
     default:
         include "pages/content.php";
 }

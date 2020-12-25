@@ -28,3 +28,13 @@ function regUser($connect, $login, $pass)
         header("Location: ../index.php?page=auth&error=true");
     }
 }
+
+function deleteGood($connect, $id)
+{
+    $id = $_GET['id'];
+    if ($id == 0)
+        return false;
+    $query = sprintf("DELETE FROM catalog where id='%d'", $id);
+    $result = mysqli_query($connect, $query);
+    header("Location: ../index.php?page=admin");
+}

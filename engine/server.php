@@ -9,3 +9,7 @@ if (isset($_POST['authors-name']) && isset($_POST['review-text'])) {
 if (isset($_POST['login']) && isset($_POST['pass'])) {
     regUser($connect, $_POST['login'], $_POST['pass']);
 }
+
+if (isset($_GET['delete-good']) && isset($_GET['id'])){
+    deleteGood($connect, $_GET['id']);
+}
