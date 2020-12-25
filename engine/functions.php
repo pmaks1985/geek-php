@@ -48,6 +48,7 @@ function addingGood($connect, $title,$description,$full_description,$price){
     $fileName = $_FILES['image']['name'];
     $type = $_FILES['image']['type'];
     $size = $_FILES['image']['size'];
+    copy($filePath, "../images/big/" . $fileName);
     if (move_uploaded_file($filePath, "../images/" . $fileName)) {
         $sql = "INSERT INTO catalog ( title, description, full_description, price, path_to_picture) VALUES ('$title','$description','$full_description','$price', '$fileName')";
         if (mysqli_query($connect, $sql)) {
