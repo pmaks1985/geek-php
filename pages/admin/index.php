@@ -9,7 +9,7 @@ $res = mysqli_query($connect, $sql);
 </div>
 <div class="row">
     <p>
-        <a href="add_goods.php" class="btn btn-primary">Добавить новый товар</a>
+        <a href="../../index.php?page=add_good" class="btn btn-primary">Добавить новый товар</a>
     </p>
     <table class="table table-hover">
         <thead>
