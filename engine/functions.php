@@ -39,7 +39,8 @@ function deleteGood($connect, $id)
     header("Location: ../index.php?page=admin");
 }
 
-function addingGood($connect, $title,$description,$full_description,$price){
+function addingGood($connect, $title, $description, $full_description, $price)
+{
     $title = trim(strip_tags($_POST['title']));
     $description = trim(strip_tags($_POST['description']));
     $full_description = trim(strip_tags($_POST['full_description']));
@@ -54,5 +55,24 @@ function addingGood($connect, $title,$description,$full_description,$price){
         if (mysqli_query($connect, $sql)) {
             header("Location: ../index.php?page=admin");
         }
+    }
+}
+
+function addingUser($connect, $fio, $phone, $user_login, $user_pass)
+{
+    $fio = trim(strip_tags($_POST['fio']));
+    $phone = trim(strip_tags($_POST['phone']));
+    $user_login = trim(strip_tags($_POST['user_login']));
+    $user_pass = trim(strip_tags($_POST['user_pass']));
+//    $address = trim(strip_tags($_POST['address']));
+//    if (isset($_POST['address'])) {
+//        $address = trim(strip_tags($_POST['address']));
+//        $sql = "INSERT INTO users (fio, phone, address, login, pass) VALUES('$fio', '$phone', '$address', '$user_login', '$user_pass')";
+//    } else {
+//        $sql = "INSERT INTO users (fio, phone, login, pass) VALUES('$fio', '$phone', '$user_login', '$user_pass')";
+//    }
+    $sql = "INSERT INTO users (fio, phone, login, pass, role) VALUES ('$fio', '$phone','$user_login', '$user_pass', '0')";
+    if (mysqli_query($connect, $sql)) {
+        header("Location: /index.php?page=reg&reg-user=ok");
     }
 }

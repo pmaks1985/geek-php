@@ -17,3 +17,8 @@ if (isset($_GET['delete-good']) && isset($_GET['id'])) {
 if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['full_description']) && isset($_POST['price'])) {
     addingGood($connect, $_POST['title'], $_POST['description'], $_POST['full_description'], $_POST['price']);
 }
+
+if (isset($_POST['fio']) && isset($_POST['phone']) && isset($_POST['user-login']) && isset($_POST['user-pass'])) {
+    addingUser($connect, $_POST['fio'], $_POST['phone'], $_POST['user-login'], $_POST['user-pass']);
+}
+//&&  isset($_POST['address'])

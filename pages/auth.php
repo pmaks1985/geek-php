@@ -19,7 +19,7 @@ session_start();
                 <input type="password" class="form-control" name="pass" value="<?= $_SESSION['pass']?>">
             </div>
             <div class="form-group text-right">
-                <input type="submit" name="review-button" value="Войти" class="btn btn-primary">
+                <input type="submit" value="Войти" class="btn btn-primary">
             </div>
         </form>
     </div>
