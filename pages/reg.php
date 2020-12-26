@@ -10,11 +10,11 @@
         <? endif; ?>
         <div class="form-group">
             <label for="fio">Ваше имя<sup> *</sup>:</label>
-            <input type="text" class="form-control" id="fio" name="fio" required>
+            <input type="text" class="form-control" id="fio" name="fio">
         </div>
         <div class="form-group">
             <label for="phone">Ваш телефон<sup> *</sup>:</label>
-            <input type="number" class="form-control" id="phone" name="phone" required>
+            <input type="number" class="form-control" id="phone" name="phone">
         </div>
         <div class="form-group">
             <label for="address">Ваш адрес:</label>

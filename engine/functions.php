@@ -58,20 +58,17 @@ function addingGood($connect, $title, $description, $full_description, $price)
     }
 }
 
-function addingUser($connect, $fio, $phone, $user_login, $user_pass)
+function addingUser($connect, $fio, $phone, $user_login, $user_pass, $address)
 {
     $fio = trim(strip_tags($_POST['fio']));
     $phone = trim(strip_tags($_POST['phone']));
     $user_login = trim(strip_tags($_POST['user-login']));
     $user_pass = trim(strip_tags($_POST['user-pass']));
-//    $address = trim(strip_tags($_POST['address']));
-//    if (isset($_POST['address'])) {
-//        $address = trim(strip_tags($_POST['address']));
-//        $sql = "INSERT INTO users (fio, phone, address, login, pass) VALUES('$fio', '$phone', '$address', '$user_login', '$user_pass')";
-//    } else {
-//        $sql = "INSERT INTO users (fio, phone, login, pass) VALUES('$fio', '$phone', '$user_login', '$user_pass')";
-//    }
-    $sql = "INSERT INTO users (fio, phone, login, pass, role) VALUES ('$fio', '$phone','$user_login', '$user_pass', '0')";
+    $address = trim(strip_tags($_POST['address']));
+    if ($fio < 0 || empty($phone) || empty($user_login) || empty($user_pass)) {
+        header("Location: /index.php?page=reg&reg-user=fields-not-entered");
+    }
+    $sql = "INSERT INTO users (fio, phone, address, login, pass, role) VALUES ('$fio', '$phone','$address','$user_login', '$user_pass', '0')";
     if (mysqli_query($connect, $sql)) {
         header("Location: /index.php?page=reg&reg-user=ok");
     }
