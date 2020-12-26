@@ -62,8 +62,8 @@ function addingUser($connect, $fio, $phone, $user_login, $user_pass)
 {
     $fio = trim(strip_tags($_POST['fio']));
     $phone = trim(strip_tags($_POST['phone']));
-    $user_login = trim(strip_tags($_POST['user_login']));
-    $user_pass = trim(strip_tags($_POST['user_pass']));
+    $user_login = trim(strip_tags($_POST['user-login']));
+    $user_pass = trim(strip_tags($_POST['user-pass']));
 //    $address = trim(strip_tags($_POST['address']));
 //    if (isset($_POST['address'])) {
 //        $address = trim(strip_tags($_POST['address']));
