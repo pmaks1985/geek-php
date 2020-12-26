@@ -22,7 +22,7 @@ switch ($_GET['page']) {
         unset($_SESSION['user_id']);
         session_destroy();
         $_SESSION = null;
-        echo "Вы успешно вышли из системы<br>";
+        echo "<p class='h5 text-success mt-4'>Вы успешно вышли из системы</p>";
         echo "<a href='index.php'>Перейти на главную</a>";
         break;
     case 'cart':
