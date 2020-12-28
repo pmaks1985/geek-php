@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <div class="row justify-content-center">
     <div class="col-md-4">
         <? if ($_GET['success'] && $_SESSION['login']): ?>

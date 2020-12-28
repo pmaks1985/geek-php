@@ -60,16 +60,18 @@ function addingGood($connect, $title, $description, $full_description, $price)
 
 function addingUser($connect, $fio, $phone, $user_login, $user_pass, $address)
 {
-    $fio = trim(strip_tags($_POST['fio']));
-    $phone = trim(strip_tags($_POST['phone']));
-    $user_login = trim(strip_tags($_POST['user-login']));
-    $user_pass = trim(strip_tags($_POST['user-pass']));
+    $errors = "";
+    $fio = !empty($_POST['fio']) ? trim(strip_tags($_POST['fio'])) : $errors .= "Поле <b>Ваше имя</b> должно быть заполнено!<br>";
+    $phone = !empty($_POST['phone']) ? trim(strip_tags($_POST['phone'])) : $errors .= "Поле <b>Ваш телефон</b> должно быть заполнено!<br>";
+    $user_login = !empty($_POST['user-login']) ? trim(strip_tags($_POST['user-login'])) : $errors .= "Поле <b>Ваш логин</b> должно быть заполнено!<br>";
+    $user_pass = !empty($_POST['user-pass']) ? trim(strip_tags($_POST['user-pass'])) : $errors .= "Поле <b>Ваш пароль</b> должно быть заполнено!<br>";
     $address = trim(strip_tags($_POST['address']));
-    if ($fio < 0 || empty($phone) || empty($user_login) || empty($user_pass)) {
-        header("Location: /index.php?page=reg&reg-user=fields-not-entered");
-    }
-    $sql = "INSERT INTO users (fio, phone, address, login, pass, role) VALUES ('$fio', '$phone','$address','$user_login', '$user_pass', '0')";
-    if (mysqli_query($connect, $sql)) {
-        header("Location: /index.php?page=reg&reg-user=ok");
+    if ($errors) {
+        header("Location: /index.php?page=reg&errors_reg=$errors");
+    } else {
+        $sql = "INSERT INTO users (fio, phone, address, login, pass, role) VALUES ('$fio', '$phone','$address','$user_login', '$user_pass', '0')";
+        if (mysqli_query($connect, $sql)) {
+            header("Location: /index.php?page=reg&reg-user=ok&fio=$fio");
+        }
     }
 }

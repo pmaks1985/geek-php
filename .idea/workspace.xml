@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/reg.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reg.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +68,8 @@
       <workItem from="1608786539753" duration="8152000" />
       <workItem from="1608874323111" duration="5330000" />
       <workItem from="1608883910409" duration="213000" />
-      <workItem from="1608978556470" duration="11053000" />
+      <workItem from="1608978556470" duration="11176000" />
+      <workItem from="1609136267598" duration="2614000" />
     </task>
     <servers />
   </component>
