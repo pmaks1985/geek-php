@@ -20,9 +20,13 @@ function regUser($connect, $login, $pass)
 
     $sql = "select id_user from users where login='$login' and pass='$pass'";
     $res = mysqli_query($connect, $sql) or die("Error: " . mysqli_error($connect));
+    $data = mysqli_fetch_assoc($res);
     if (mysqli_num_rows($res) == 1) {
         $_SESSION["login"] = $login;
         $_SESSION["pass"] = $pass;
+        if ($data['id_user'] == 10) { // сделал одного администратора в системе
+            $_SESSION['admin'] = true;
+        }
         header("Location: ../index.php?page=auth&success=true");
     } else {
         header("Location: ../index.php?page=auth&error=true");

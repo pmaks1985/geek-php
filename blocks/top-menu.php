@@ -24,6 +24,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="?page=basket">Корзина</a>
                 </li>
+            <? endif; ?>
+            <? if (isset($_SESSION['admin'])): ?>
                 <li class="nav-item">
                     <a class="nav-link text-danger" href="?page=admin">Админка</a>
                 </li>
