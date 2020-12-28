@@ -4,7 +4,9 @@
 <div class="row">
     <form action="../../engine/server.php" method="post" enctype="multipart/form-data">
         <? if ($_GET['reg-user'] === 'ok'): ?>
-            <p class="h5 mt-4 text-success">Доброе пожаловать <?=$_GET['fio'];?>,<br>Вы успешно зарегистрировались</p>
+            <p class="h5 mt-4 text-success">Доброе пожаловать <?=$_GET['fio'];?>,<br>
+                Вы успешно зарегистрировались, <br>
+                просьба <a href="/index.php?page=auth">авторизироваться</a> на сайте.</p>
         <? endif; ?>
         <? if (isset($_GET['errors_reg'])): ?>
         <p class='text-danger mt-4'><?= $_GET['errors_reg']; ?>
