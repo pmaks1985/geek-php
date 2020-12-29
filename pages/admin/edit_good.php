@@ -8,6 +8,13 @@ $res = mysqli_query($connect, $sql);
     <h1>Редактировать товар</h1>
 </div>
 <div class="row">
+    <? if ($_GET['success'] === 'ok') : ?>
+        <p class="h5 my-3 text-success">Товар успешно изменен</p>
+    <? elseif ($_GET['success'] === 'error') : ?>
+        <p class="h5 my-3 text-danger">Ошибка изменения товара</p>
+    <? endif; ?>
+</div>
+<div class="row">
     <? while ($data = mysqli_fetch_assoc($res)): ?>
         <form action="../../engine/server.php?id=<?= $data['id'] ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">

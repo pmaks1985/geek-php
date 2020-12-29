@@ -95,8 +95,8 @@ function updateGood($connect, $title, $description, $full_description, $price, $
     $sql = "UPDATE catalog SET title = '$title',description = '$description',full_description = '$full_description',price = '$price',path_to_picture = '$fileName' WHERE id=$id";
     $res = mysqli_query($connect, $sql);
     if ($res) {
-        header("Location: /?page=admin&success=ok");
+        header("Location: /?page=edit_good&success=ok&id=$id");
     } else {
-        header("Location: /?page=admin&success=error");
+        header("Location: /?page=edit_good&success=error&id=$id");
     }
 }

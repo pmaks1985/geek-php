@@ -19,11 +19,6 @@ $res = mysqli_query($connect, $sql);
         </tr>
         </thead>
         <tbody>
-        <? if ($_GET['success'] === 'ok') : ?>
-            <p class="h5 mt-4 text-success">Товар успешно добавлен</p>
-        <? elseif ($_GET['success'] === 'error') : ?>
-            <p class="h5 mt-4 text-danger">Ошибка добавления товара</p>
-        <? endif; ?>
         <?php while ($good = mysqli_fetch_assoc($res)): ?>
             <tr>
                 <td scope="row">
