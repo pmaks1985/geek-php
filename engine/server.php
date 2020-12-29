@@ -21,3 +21,7 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['full
 if (isset($_POST['registration'])) {
     addingUser($connect, $_POST['fio'], $_POST['phone'], $_POST['user-login'], $_POST['user-pass'], $_POST['address']);
 }
+
+if (isset($_POST['edit-good'])) {
+
+}
