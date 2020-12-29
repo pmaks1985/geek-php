@@ -79,3 +79,29 @@ function addingUser($connect, $fio, $phone, $user_login, $user_pass, $address)
         }
     }
 }
+
+function updateGood($connect, $title, $price, $info, $img, $id)
+{
+    $sql = "update goods set title='$title',info='$info',price=$price,img='$img' where id=$id";
+    $res = mysqli_query($connect, $sql);
+    if ($res) {
+        return 1;
+    }
+    return 0;
+}
+
+function getGoods($connect,$id=0){
+    if($id == 0) {
+        $sql = "select * from goods";
+        $res = mysqli_query($connect,$sql);
+        while($good = mysqli_fetch_assoc($res)){//каждую строку в базе с товаром преобразовали в массив $good
+            $goods[$good['id']] = $good['title'];//каждый товар добавили в массив товаров $goods
+        }
+        return $goods;
+    }
+    else{
+        $sql = "select * from goods where id=$id";
+        $res = mysqli_query($connect,$sql);
+        return mysqli_fetch_assoc($res);//вернули массив из 1 элемента
+    }
+}

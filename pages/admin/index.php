@@ -32,7 +32,8 @@ $res = mysqli_query($connect, $sql);
                 </td>
                 <td>
                     <p>
-                        <a href="#" class="btn btn-primary">Изменить</a> <!--edit_goods.php?id=<= $good['id'] ?>-->
+                        <a href="<? $_SERVER['DOCUMENT_ROOT'] ?>/index.php?page=edit_good&id=<?= $good['id'] ?>" class="btn
+                        btn-primary">Изменить</a> <!--edit_goods.php?id=<= $good['id'] ?>-->
                     </p>
                     <p>
                         <a href="../../engine/server.php?delete-good=true&id=<?= $good['id'] ?>"
