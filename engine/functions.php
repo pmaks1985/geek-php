@@ -80,28 +80,23 @@ function addingUser($connect, $fio, $phone, $user_login, $user_pass, $address)
     }
 }
 
-function updateGood($connect, $title, $price, $info, $img, $id)
+function updateGood($connect, $title, $description, $full_description, $price, $id)
 {
-    $sql = "update goods set title='$title',info='$info',price=$price,img='$img' where id=$id";
+    $title = trim(strip_tags($_POST['title']));
+    $description = trim(strip_tags($_POST['description']));
+    $full_description = trim(strip_tags($_POST['full_description']));
+    $price = (int)trim(strip_tags($_POST['price']));
+    $id = (int)$_GET['id'];
+    $filePath = $_FILES['image']['tmp_name'];
+    $fileName = $_FILES['image']['name'];
+    $type = $_FILES['image']['type'];
+    $size = $_FILES['image']['size'];
+    copy($filePath, "../images/big/" . $fileName);
+    $sql = "UPDATE catalog SET title = '$title',description = '$description',full_description = '$full_description',price = '$price',path_to_picture = '$fileName' WHERE id=$id";
     $res = mysqli_query($connect, $sql);
     if ($res) {
-        return 1;
-    }
-    return 0;
-}
-
-function getGoods($connect,$id=0){
-    if($id == 0) {
-        $sql = "select * from goods";
-        $res = mysqli_query($connect,$sql);
-        while($good = mysqli_fetch_assoc($res)){//каждую строку в базе с товаром преобразовали в массив $good
-            $goods[$good['id']] = $good['title'];//каждый товар добавили в массив товаров $goods
-        }
-        return $goods;
-    }
-    else{
-        $sql = "select * from goods where id=$id";
-        $res = mysqli_query($connect,$sql);
-        return mysqli_fetch_assoc($res);//вернули массив из 1 элемента
+        header("Location: /?page=admin&success=ok");
+    } else {
+        header("Location: /?page=admin&success=error");
     }
 }
