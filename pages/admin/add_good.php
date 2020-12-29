@@ -24,6 +24,6 @@
             <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
             <input type="file" accept="image/*" class="form-control" name="image">
         </div>
-        <input type="submit" class="btn btn-primary" value="Добавить">
+        <input type="submit" class="btn btn-primary" value="Добавить" name="add_good">
     </form>
 </div>

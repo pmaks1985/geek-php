@@ -14,7 +14,7 @@ if (isset($_GET['delete-good']) && isset($_GET['id'])) {
     deleteGood($connect, $_GET['id']);
 }
 
-if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['full_description']) && isset($_POST['price'])) {
+if (isset($_POST['add_good'])) {
     addingGood($connect, $_POST['title'], $_POST['description'], $_POST['full_description'], $_POST['price']);
 }
 
