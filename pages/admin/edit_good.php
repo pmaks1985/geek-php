@@ -31,9 +31,9 @@ $res = mysqli_query($connect, $sql);
                        value="<?= $data['price'] ?>">
             </div>
             <div class="form-group">
-                <label for="image">Картинка</label>
+                <label for="image">Картинка</label><br>
                 <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
-                <img src="/images/<?= $data['path_to_picture'] ?>" class="card-img-top" alt="...">
+                <img src="/images/<?= $data['path_to_picture'] ?>" class="card-img-top" alt="..." style="width: 200px;">
                 <input type="file" accept="image/*" class="form-control" name="image" value="<?= $data['image'] ?>">
             </div>
             <input type="submit" class="btn btn-primary" value="Сохранить" name="edit-good">
