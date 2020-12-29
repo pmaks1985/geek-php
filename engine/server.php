@@ -23,5 +23,5 @@ if (isset($_POST['registration'])) {
 }
 
 if (isset($_POST['edit-good'])) {
-    updateGood($connect, $_POST['title'], $_POST['description'], $_POST['full_description'], $_POST['price'], $_POST['title'], $_GET['id']);
+   updateGood($connect, $_POST['title'], $_POST['description'], $_POST['full_description'], $_POST['price'], $_POST['image'], $_GET['id']);
 }

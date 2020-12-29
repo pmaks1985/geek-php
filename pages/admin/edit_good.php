@@ -41,7 +41,7 @@ $res = mysqli_query($connect, $sql);
                 <label for="image">Картинка</label><br>
                 <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
                 <img src="/images/<?= $data['path_to_picture'] ?>" class="card-img-top" alt="..." style="width: 200px;">
-                <input type="file" accept="image/*" class="form-control" name="image" value="<?= $data['image'] ?>">
+                <input type="file" accept="image/*" class="form-control" name="image" value="<?= $data['path_to_picture'] ?>">
             </div>
             <input type="submit" class="btn btn-primary" value="Сохранить" name="edit-good">
         </form>

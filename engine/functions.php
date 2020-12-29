@@ -80,19 +80,25 @@ function addingUser($connect, $fio, $phone, $user_login, $user_pass, $address)
     }
 }
 
-function updateGood($connect, $title, $description, $full_description, $price, $id)
+function updateGood($connect, $title, $description, $full_description, $price, $image, $id)
 {
     $title = trim(strip_tags($_POST['title']));
     $description = trim(strip_tags($_POST['description']));
     $full_description = trim(strip_tags($_POST['full_description']));
     $price = (int)trim(strip_tags($_POST['price']));
+    $image = trim(strip_tags($_POST['image']));
     $id = (int)$_GET['id'];
     $filePath = $_FILES['image']['tmp_name'];
     $fileName = $_FILES['image']['name'];
     $type = $_FILES['image']['type'];
     $size = $_FILES['image']['size'];
-    copy($filePath, "../images/big/" . $fileName);
-    $sql = "UPDATE catalog SET title = '$title',description = '$description',full_description = '$full_description',price = '$price',path_to_picture = '$fileName' WHERE id=$id";
+    if ($filePath) {
+        copy($filePath, "../images/big/" . $fileName);
+        $sql = "UPDATE catalog SET title = '$title',description = '$description',full_description = '$full_description',price = '$price',path_to_picture = '$fileName' WHERE id=$id";
+    } else {
+        $sql = "UPDATE catalog SET title = '$title',description = '$description',full_description = '$full_description',price = '$price',path_to_picture = '$image' WHERE id=$id";
+    }
+
     $res = mysqli_query($connect, $sql);
     if ($res) {
         header("Location: /?page=edit_good&success=ok&id=$id");
