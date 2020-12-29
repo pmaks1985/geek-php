@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include_once "config.php";
 $id = $_GET['id'];
 $sql = "SELECT * FROM catalog WHERE id='$id' ";
 $res = mysqli_query($connect, $sql);
@@ -9,7 +9,7 @@ $res = mysqli_query($connect, $sql);
 </div>
 <div class="row">
     <? while ($data = mysqli_fetch_assoc($res)): ?>
-        <form action="../../engine/server.php" method="post" enctype="multipart/form-data">
+        <form action="../../engine/server.php?id=<?= $data['id'] ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Название товара</label>
                 <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
@@ -33,6 +33,7 @@ $res = mysqli_query($connect, $sql);
             <div class="form-group">
                 <label for="image">Картинка</label>
                 <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
+                <img src="/images/<?= $data['path_to_picture'] ?>" class="card-img-top" alt="...">
                 <input type="file" accept="image/*" class="form-control" name="image" value="<?= $data['image'] ?>">
             </div>
             <input type="submit" class="btn btn-primary" value="Сохранить" name="edit-good">

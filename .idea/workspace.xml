@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/admin/edit_good.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/acer.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big/Screenshot_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big/acer.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big/iphone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big/samsung.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/iphone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/samsung.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/edit_good.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/edit_good.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +82,7 @@
       <workItem from="1608883910409" duration="213000" />
       <workItem from="1608978556470" duration="11176000" />
       <workItem from="1609136267598" duration="5151000" />
-      <workItem from="1609220845950" duration="3501000" />
+      <workItem from="1609220845950" duration="7157000" />
     </task>
     <servers />
   </component>
