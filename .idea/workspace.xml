@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/Screenshot_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/big/Screenshot_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/big/samsung.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/big/samsung.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/add_good.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/add_good.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/edit_good.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/edit_good.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="cb816a52-528f-408b-9f6a-89200583e914" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +64,7 @@
       <workItem from="1608883910409" duration="213000" />
       <workItem from="1608978556470" duration="11176000" />
       <workItem from="1609136267598" duration="5151000" />
-      <workItem from="1609220845950" duration="8915000" />
+      <workItem from="1609220845950" duration="9514000" />
     </task>
     <servers />
   </component>
