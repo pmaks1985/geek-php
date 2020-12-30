@@ -19,7 +19,7 @@ switch ($_GET['page']) {
         include "pages/lk.php";
         break;
     case 'exit':
-        unset($_SESSION['user_id']);
+        unset($_SESSION['login']);
         session_destroy();
         $_SESSION = null;
         echo "<p class='h5 text-success mt-4'>Вы успешно вышли из системы</p>";

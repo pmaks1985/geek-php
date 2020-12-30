@@ -24,6 +24,7 @@ function regUser($connect, $login, $pass)
     if (mysqli_num_rows($res) == 1) {
         $_SESSION["login"] = $login;
         $_SESSION["pass"] = $pass;
+        $_SESSION["id_user"] = $data['id_user'];
         if ($data['id_user'] == 10) { // сделал одного администратора в системе
             $_SESSION['admin'] = true;
         }
