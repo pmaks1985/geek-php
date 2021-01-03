@@ -37,8 +37,8 @@ switch ($_GET['page']) {
     case 'edit_good':
         include "pages/admin/edit_good.php";
         break;
-    case 'prices':
-        include "pages/prices.php";
+    case 'basket':
+        include "pages/basket.php";
         break;
     case 'details_order':
         include "pages/admin/detail_order.php";
