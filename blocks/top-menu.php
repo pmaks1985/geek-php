@@ -16,9 +16,6 @@
                 </li>
             <? else: ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="?page=lk">Личный кабинет</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="?page=exit">Выйти</a>
                 </li>
                 <li class="nav-item">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 21 2020 г., 10:58
+-- Время создания: Янв 04 2021 г., 20:49
 -- Версия сервера: 5.6.47
 -- Версия PHP: 7.2.29
 
@@ -34,6 +34,15 @@ CREATE TABLE `basket` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `basket`
+--
+
+INSERT INTO `basket` (`id`, `id_good`, `count`, `id_user`) VALUES
+(1, 2, 2, 10),
+(4, 1, 2, 10),
+(7, 11, 2, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -56,7 +65,8 @@ CREATE TABLE `catalog` (
 INSERT INTO `catalog` (`id`, `title`, `description`, `full_description`, `price`, `path_to_picture`) VALUES
 (1, 'Acer', 'Acer lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam asperiores.', 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации \"Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..\" Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам \"lorem ipsum\" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).', 800, 'acer.jpeg'),
 (2, 'No-name', 'No-name some quick example text to build on the card title and make up the bulk of the card\'s content.', 'Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.', 650, 'iphone.jpg'),
-(3, 'Samsung', 'Samsung deleniti doloremque fuga, impedit labore modi non nulla placeat quia sit totam. Consectetur. ', 'Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, \"consectetur\", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги \"de Finibus Bonorum et Malorum\" (\"О пределах добра и зла\"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", происходит от одной из строк в разделе 1.10.32', 1100, 'samsung.jpg');
+(10, 'цкрупукруыкр', '6846814684116468', '1q2w3e4r5t6y7uу', 541847, 'Screenshot_8.png'),
+(11, 'Samsung', 'Samsung deleniti doloremque fuga, impedit labore modi non nulla placeat quia sit totam. Consectetur.', 'Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, \"consectetur\", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги \"de Finibus Bonorum et Malorum\" (\"О пределах добра и зла\"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", происходит от одной из строк в разделе 1.10.32', 681646, 'samsung.jpg');
 
 -- --------------------------------------------------------
 
@@ -128,7 +138,8 @@ INSERT INTO `reviews` (`id`, `name`, `text_review`, `date_review`) VALUES
 (9, 'Тимофей', 'я не умею писать, за меня пишет папа моим пальцем', '2020-12-13 10:12:29'),
 (11, 'wigehwiuvb', 'aegawgawegbearb', '2020-12-14 06:41:51'),
 (12, 'Tom Bom', 'Some else text', '2020-12-14 06:44:10'),
-(18, '681764314', 'awwabwbwe', '2020-12-21 07:45:16');
+(18, '681764314', 'awwabwbwe', '2020-12-21 07:45:16'),
+(19, 'Тест Тестов', 'эзыьпьиькезек и8718иыукпиыи\r\nыукпиыупп5481иуик ', '2021-01-04 17:48:56');
 
 -- --------------------------------------------------------
 
@@ -138,7 +149,7 @@ INSERT INTO `reviews` (`id`, `name`, `text_review`, `date_review`) VALUES
 
 CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
-  `fio` varchar(10) NOT NULL,
+  `fio` varchar(30) NOT NULL,
   `phone` varchar(12) NOT NULL,
   `address` text NOT NULL,
   `login` varchar(10) NOT NULL,
@@ -151,7 +162,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `fio`, `phone`, `address`, `login`, `pass`, `role`) VALUES
-(10, 'Сергей', '22423424', 'Саратов', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 1);
+(10, 'max', '22423424', 'Иваново', 'admin', '123456', 1),
+(11, 'Тест Семен', '88007008000', 'Кохма', 'test', 'qwerty', 0),
+(12, 'Иван Семен', '89203541218', '', 'ivan', 'q1w2e3', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -201,13 +214,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `orders`
@@ -225,13 +238,13 @@ ALTER TABLE `orderstatus`
 -- AUTO_INCREMENT для таблицы `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

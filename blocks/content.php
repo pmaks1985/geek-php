@@ -15,9 +15,6 @@ switch ($_GET['page']) {
     case 'auth':
         include "pages/auth.php";
         break;
-    case 'lk':
-        include "pages/lk.php";
-        break;
     case 'exit':
         unset($_SESSION['login']);
         session_destroy();
@@ -39,12 +36,6 @@ switch ($_GET['page']) {
         break;
     case 'basket':
         include "pages/basket.php";
-        break;
-    case 'details_order':
-        include "pages/admin/detail_order.php";
-        break;
-    case 'edit_orders':
-        include "pages/admin/orders.php";
         break;
     default:
         include "pages/content.php";
